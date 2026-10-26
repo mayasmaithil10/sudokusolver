@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <main>
+        <h1>Sudoku Solver</h1>
+        <p class="subtitle">Enter any Sudoku. Get the solution.</p>
+
+        <section id="instructions" aria-label="Instructions">
+            <h2>How to use</h2>
+            <ul>
+                <li>Click a cell or navigate with arrow keys to select.</li>
+                <li>Enter numbers 1–9 via keyboard or click the number pad below.</li>
+                <li>Use Backspace/Delete or Erase button to clear a cell.</li>
+                <li>Click <strong>Solve Sudoku</strong> to solve the puzzle.</li>
+                <li>Check entries for conflicts any time.</li>
+                <li>Use Reset to remove solver answers but keep clues.</li>
+                <li>Clear All empties the grid.</li>
+                <li>Undo reverses your last entry.</li>
+            </ul>
+        </section>
+
+        <section id="sudoku-container" role="application" aria-label="Sudoku Grid and Controls">
+            <table id="sudoku-grid" aria-label="Sudoku Grid" tabindex="0"></table>
+
+            <div id="number-pad" aria-label="Number pad">
+                <button class="num-btn" data-num="1" type="button">1</button>
+                <button class="num-btn" data-num="2" type="button">2</button>
+                <button class="num-btn" data-num="3" type="button">3</button>
+                <button class="num-btn" data-num="4" type="button">4</button>
+                <button class="num-btn" data-num="5" type="button">5</button>
+                <button class="num-btn" data-num="6" type="button">6</button>
+                <button class="num-btn" data-num="7" type="button">7</button>
+                <button class="num-btn" data-num="8" type="button">8</button>
+                <button class="num-btn" data-num="9" type="button">9</button>
+                <button id="erase-btn" type="button" aria-label="Erase selected cell">Erase</button>
+            </div>
+
+            <div id="controls">
+                <button id="solve-btn" type="button">Solve Sudoku</button>
+                <button id="check-btn" type="button">Check Entries</button>
+                <button id="reset-btn" type="button">Reset Solution</button>
+                <button id="clear-btn" type="button">Clear All</button>
+                <button id="undo-btn" type="button">Undo</button>
+            </div>
+
+            <div id="message" role="alert" aria-live="assertive"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

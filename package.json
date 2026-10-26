@@ -1,0 +1,14 @@
+{
+    "name": "sudoku-solver",
+    "version": "1.0.0",
+    "description": "A web application to solve Sudoku puzzles",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "Chatbox AI",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
